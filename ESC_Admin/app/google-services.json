@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "928414036886",
+    "firebase_url": "https://esc-website-e3bb6.firebaseio.com",
+    "project_id": "esc-website-e3bb6",
+    "storage_bucket": "esc-website-e3bb6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:928414036886:android:fd9f3fcf442b40b23ee3b7",
+        "android_client_info": {
+          "package_name": "com.kevappsgaming.esc_admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "928414036886-hhj7ucan3uhrki8se2rrkj9cbdv3c7oq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYe3w-QfT71pSf-gDN8agOxndhWKA8POY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "928414036886-hhj7ucan3uhrki8se2rrkj9cbdv3c7oq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
