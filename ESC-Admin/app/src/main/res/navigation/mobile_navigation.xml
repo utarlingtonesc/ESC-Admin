@@ -12,22 +12,34 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
+        android:id="@+id/nav_newsfeed"
+        android:name="com.kevappsgaming.esc_admin.ui.newsfeed.NewsFeedFragment"
+        android:label="@string/menu_newsfeed"
+        tools:layout="@layout/fragment_newsletter" />
+
+    <fragment
+        android:id="@+id/nav_events"
+        android:name="com.kevappsgaming.esc_admin.ui.events.EventsFragment"
+        android:label="@string/menu_events"
+        tools:layout="@layout/fragment_events" />
+
+    <fragment
+        android:id="@+id/nav_officers"
+        android:name="com.kevappsgaming.esc_admin.ui.officers.OfficersFragment"
+        android:label="@string/menu_officers"
+        tools:layout="@layout/fragment_officers" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.kevappsgaming.esc_admin.ui.settings.SettingsFragment"
+        android:label="@string/menu_settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
         android:id="@+id/nav_gallery"
         android:name="com.kevappsgaming.esc_admin.ui.gallery.GalleryFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_gallery" />
-
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.kevappsgaming.esc_admin.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
-
-    <fragment
-        android:id="@+id/nav_tools"
-        android:name="com.kevappsgaming.esc_admin.ui.tools.ToolsFragment"
-        android:label="@string/menu_tools"
-        tools:layout="@layout/fragment_tools" />
 
     <fragment
         android:id="@+id/nav_share"
@@ -37,7 +49,7 @@
 
     <fragment
         android:id="@+id/nav_send"
-        android:name="com.kevappsgaming.esc_admin.ui.send.SendFragment"
-        android:label="@string/menu_send"
+        android:name="com.kevappsgaming.esc_admin.ui.newsletter.NewsLetterFragment"
+        android:label="@string/menu_newsletter"
         tools:layout="@layout/fragment_send" />
 </navigation>
