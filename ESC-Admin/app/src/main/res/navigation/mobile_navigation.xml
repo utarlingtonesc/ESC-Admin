@@ -9,47 +9,55 @@
         android:id="@+id/nav_home"
         android:name="com.kevappsgaming.esc_admin.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
+            app:destination="@id/nav_home_second" />
+    </fragment>
 
     <fragment
-        android:id="@+id/nav_newsfeed"
-        android:name="com.kevappsgaming.esc_admin.ui.newsfeed.NewsFeedFragment"
-        android:label="@string/menu_newsfeed"
-        tools:layout="@layout/fragment_newsletter" />
+        android:id="@+id/nav_home_second"
+        android:name="com.kevappsgaming.esc_admin.ui.home.HomeSecondFragment"
+        android:label="@string/home_second"
+        tools:layout="@layout/fragment_home_second">
+        <action
+            android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
+            app:destination="@id/nav_home" />
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>
 
     <fragment
-        android:id="@+id/nav_events"
+        android:id="@+id/newsfeedFragment"
+        android:name="com.kevappsgaming.esc_admin.ui.newsfeed.NewsfeedFragment"
+        android:label="fragment_newsfeed"
+        tools:layout="@layout/fragment_newsfeed" />
+    <fragment
+        android:id="@+id/eventsFragment"
         android:name="com.kevappsgaming.esc_admin.ui.events.EventsFragment"
-        android:label="@string/menu_events"
+        android:label="fragment_events"
         tools:layout="@layout/fragment_events" />
-
     <fragment
-        android:id="@+id/nav_officers"
+        android:id="@+id/officersFragment"
         android:name="com.kevappsgaming.esc_admin.ui.officers.OfficersFragment"
-        android:label="@string/menu_officers"
+        android:label="fragment_officers"
         tools:layout="@layout/fragment_officers" />
-
     <fragment
-        android:id="@+id/nav_settings"
+        android:id="@+id/settingsFragment"
         android:name="com.kevappsgaming.esc_admin.ui.settings.SettingsFragment"
-        android:label="@string/menu_settings"
+        android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
-
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.kevappsgaming.esc_admin.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
+        android:id="@+id/socialFragment"
+        android:name="com.kevappsgaming.esc_admin.ui.social.SocialFragment"
+        android:label="fragment_social"
+        tools:layout="@layout/fragment_social" />
     <fragment
-        android:id="@+id/nav_share"
-        android:name="com.kevappsgaming.esc_admin.ui.share.ShareFragment"
-        android:label="@string/menu_share"
-        tools:layout="@layout/fragment_share" />
-
-    <fragment
-        android:id="@+id/nav_send"
-        android:name="com.kevappsgaming.esc_admin.ui.newsletter.NewsLetterFragment"
-        android:label="@string/menu_newsletter"
-        tools:layout="@layout/fragment_send" />
+        android:id="@+id/newsletterFragment"
+        android:name="com.kevappsgaming.esc_admin.ui.newsletter.NewsletterFragment"
+        android:label="fragment_newsletter"
+        tools:layout="@layout/fragment_newsletter" />
 </navigation>

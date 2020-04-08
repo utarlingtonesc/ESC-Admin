@@ -1,4 +1,4 @@
-package com.kevappsgaming.esc_admin.ui.officers;
+package com.kevappsgaming.esc_admin.ui.newsfeed;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,25 +12,23 @@ import android.view.ViewGroup;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.kevappsgaming.esc_admin.R;
-import com.kevappsgaming.esc_admin.ui.activities.OfficersActivity;
+import com.kevappsgaming.esc_admin.ui.activities.NewsfeedActivity;
 
-public class OfficersFragment extends Fragment {
+public class NewsfeedFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View root = inflater.inflate(R.layout.fragment_officers, container, false);
-        FloatingActionButton add_officers = (FloatingActionButton) root.findViewById(R.id.floating_action_button);
+        View root = inflater.inflate(R.layout.fragment_newsfeed, container, false);
+        FloatingActionButton create_new_post = (FloatingActionButton) root.findViewById(R.id.floating_action_button);
 
-        add_officers.setOnClickListener(new View.OnClickListener() {
+        create_new_post.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //Toast.makeText(getContext(), "Click", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(getActivity().getBaseContext(), OfficersActivity.class);
+                Intent intent = new Intent(getActivity().getBaseContext(), NewsfeedActivity.class);
                 getActivity().startActivity(intent);
             }
         });
-
         return root;
     }
 }
-

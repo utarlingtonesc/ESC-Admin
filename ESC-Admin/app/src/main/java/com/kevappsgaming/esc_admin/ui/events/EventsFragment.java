@@ -1,38 +1,35 @@
 package com.kevappsgaming.esc_admin.ui.events;
 
-import androidx.lifecycle.ViewModelProviders;
-
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.kevappsgaming.esc_admin.R;
+import com.kevappsgaming.esc_admin.ui.activities.EventsActivity;
 
 public class EventsFragment extends Fragment {
 
-    private EventsViewModel mViewModel;
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-    public static EventsFragment newInstance() {
-        return new EventsFragment();
+        View root = inflater.inflate(R.layout.fragment_events, container, false);
+        FloatingActionButton create_new_event = (FloatingActionButton) root.findViewById(R.id.floating_action_button);
+
+        create_new_event.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Toast.makeText(getContext(), "Click", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getActivity().getBaseContext(), EventsActivity.class);
+                getActivity().startActivity(intent);
+            }
+        });
+
+        return root;
     }
-
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_events, container, false);
-    }
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(EventsViewModel.class);
-        // TODO: Use the ViewModel
-    }
-
 }
